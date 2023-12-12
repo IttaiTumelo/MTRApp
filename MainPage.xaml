@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MTRApp.MainPage">
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+            <Grid RowDefinitions="*">
+                <Image x:Name="PickedImage" Aspect="AspectFit"/>
+            </Grid>
+            <ActivityIndicator x:Name="Loading" IsRunning="true" />
+
+
+
+            <Label
+                Text="Welcome!"
+                Style="{StaticResource Headline}"
+                SemanticProperties.HeadingLevel="Level1" />
+
+            <Label
+                Text="Choose an Action "
+                Style="{StaticResource SubHeadline}"
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="Welcome to dot net Multi platform App U I" />
+
+            <Button x:Name="PickImageButton" Text="Pick an image" Clicked="OnPickImageButtonClicked"/>
+
+
+            <Button
+                x:Name="CounterBtn"
+                Text="Take a picture" 
+                SemanticProperties.Hint="Counts the number of times you click"
+                Clicked="OnCounterClicked"
+                HorizontalOptions="Fill" />
+
+
+            <Button
+                Text="process picture" 
+                SemanticProperties.Hint="Counts the number of times you click"
+                Clicked="Predict"
+                HorizontalOptions="Fill" />
+
+
+
+
+
+            <Label x:Name="xResult"/>
+
+            <Label x:Name="YoloText" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+
+
+</ContentPage>
